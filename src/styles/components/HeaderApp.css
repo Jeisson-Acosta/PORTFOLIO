@@ -1,0 +1,65 @@
+.header-app {
+  position: relative;
+  padding: 26px;
+  z-index: 50;
+  border-bottom: 1px solid #02464e;
+  background-color: #000;
+}
+
+.header-app nav {
+  position: relative;
+  z-index: 51;
+}
+
+.header-app nav a {
+  pointer-events: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  font-size: 18px;
+  color: cyan;
+  text-decoration: none;
+  opacity: 0.8;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.header-app nav a.active {
+  background: #01343a;
+  color: yellow;
+}
+
+.header-app-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-app-content-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-app-content-left .terminal-icon {
+  animation: terminal-icon 3s infinite;
+}
+
+@keyframes terminal-icon {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.header-app-content-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
