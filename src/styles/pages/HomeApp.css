@@ -78,3 +78,27 @@
 .button-cv:hover {
     background-color: rgba(6, 182, 212, 0.1);
 }
+
+.info-json {
+    flex: 1;
+    position: relative;
+}
+.container-info-json {
+    position: relative;
+    background: linear-gradient(to bottom right, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 14px;
+}
+.container-info-json .code-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    color: #facc15;
+    opacity: 0.6;
+}
