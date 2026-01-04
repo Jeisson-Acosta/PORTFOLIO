@@ -48,7 +48,12 @@ function App() {
       {/* BACKGROUND APP */}
       <section
         className="background-app"
-        style={{ position: "fixed", inset: "0", opacity: "10" }}
+        style={{
+          position: "fixed",
+          inset: "0",
+          opacity: "10",
+          pointerEvents: "none",
+        }}
       >
         <div
           style={{

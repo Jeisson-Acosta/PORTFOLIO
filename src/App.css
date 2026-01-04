@@ -8,5 +8,5 @@
   height: 384px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 50;
+  z-index: 0;
 }
