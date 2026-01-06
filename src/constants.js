@@ -27,12 +27,6 @@ export const JSON_DESCRIPTION = {
   available: true,
 };
 
-export const CARDS_INFO = [
-  { label: "Projects", value: "10+" },
-  { label: "Experience", value: "2+" },
-  { label: "Clients", value: "0" },
-];
-
 export const PROJECTS_DATA = [
   {
     id: 1,
@@ -97,4 +91,10 @@ export const PROJECTS_DATA = [
     status: "production",
     link: "https://github.com/Jeisson-Acosta/proyecto-calculadora.git",
   },
+];
+
+export const CARDS_INFO = [
+  { label: "Projects", value: PROJECTS_DATA.length + "+" },
+  { label: "Experience", value: "2+" },
+  { label: "Clients", value: "0" },
 ];
