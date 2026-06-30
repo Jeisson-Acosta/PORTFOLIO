@@ -1,0 +1,128 @@
+.header-app {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-default);
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Fake titlebar — reinforces the "editor window" concept */
+.header-app-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-inset);
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+
+.window-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.header-app-path {
+  margin-left: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.path-sep {
+  color: var(--fg-faint);
+  margin: 0 2px;
+}
+.path-active {
+  color: var(--accent-blue);
+}
+
+/* Tab bar */
+.header-app-tabs {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.header-app-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.editor-tab {
+  --tab-color: var(--accent-blue);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--fg-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  border-right: 1px solid var(--border-subtle);
+  background: var(--bg-base);
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.editor-tab:hover {
+  color: var(--fg-default);
+  background: var(--bg-elevated);
+}
+
+.editor-tab .tab-icon {
+  color: var(--tab-color);
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.editor-tab .tab-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--fg-faint);
+  margin-left: 2px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.editor-tab.active {
+  color: var(--fg-default);
+  background: var(--bg-elevated);
+}
+
+.editor-tab.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--tab-color);
+}
+
+.editor-tab.active .tab-dot {
+  background: var(--tab-color);
+  transform: scale(1.2);
+  box-shadow: 0 0 8px var(--tab-color);
+}
+
+@media (max-width: 520px) {
+  .header-app-titlebar {
+    display: none;
+  }
+  .editor-tab {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .editor-tab .tab-name {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
